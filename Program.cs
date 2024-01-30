@@ -1,17 +1,28 @@
-﻿string endGameCommand = "i don't know";
+﻿string EndGameCommand = "i don't know";
 Console.WriteLine("Ill ask you 3 simple questions, in order to be a citizen of Chrzanów you must answer all of them 3 correctly");
-Console.WriteLine($"or you could write '{endGameCommand}' but you would never do that right? haha, alright here goes the first question");
+Console.WriteLine($"or you could write '{EndGameCommand}' but you would never do that right? haha");
 
 while (true)
 {
-
+Console.WriteLine("But before we start tell me, whats your name?");
+    var PlayerName = Console.ReadLine();
+        
+        if (PlayerName == EndGameCommand)
+    {
+        Console.WriteLine($"wha... what? How can you '{EndGameCommand}'?! OK THEN mister {EndGameCommand}. How about you leave then? Actually no. You failed. BYE JOKER");
+        break;
+    }
+else
+{
+    Console.WriteLine($"{PlayerName}? Nice name, alright now that i know your name lets begin with this first question!");
+}
     Console.WriteLine("------------------------------------");
     Console.WriteLine("Who's the current major of Chrzanów?");
     string? firstPlayerAnswer = Console.ReadLine();
 
-    if (firstPlayerAnswer == endGameCommand)
+    if (firstPlayerAnswer == EndGameCommand)
     {
-        Console.WriteLine($"Really? I was joking when i wrote that you can you can just type '{endGameCommand}' you know that? Not even gonna try to throw a guess? Fine, then leave.");
+        Console.WriteLine($"Really? I was joking when i wrote that you can you can just type '{EndGameCommand}' you know that? Not even gonna try to throw a guess? Fine, then leave.");
         break;
     }
     if (firstPlayerAnswer == "Robert Maciaszek" || firstPlayerAnswer == "Maciaszek")
@@ -28,9 +39,9 @@ while (true)
 
     Console.WriteLine("What is happening on 'Kąty'?");
     firstPlayerAnswer = Console.ReadLine();
-        if (firstPlayerAnswer == endGameCommand)
+        if (firstPlayerAnswer == EndGameCommand)
     {
-        Console.WriteLine($"Really? I was joking when i wrote that you can you can just type '{endGameCommand}' you know that? Not even gonna try to throw a guess? Fine, then leave.");
+        Console.WriteLine($"Really? I was joking when i wrote that you can you can just type '{EndGameCommand}' you know that? Not even gonna try to throw a guess? Fine, then leave.");
         break;
     }
     if (firstPlayerAnswer == "nothing")
@@ -46,9 +57,9 @@ while (true)
 
     Console.WriteLine("What is the name of the bus line that connects Chrzanów and Jaworzno?");
     firstPlayerAnswer = Console.ReadLine();
-    if (firstPlayerAnswer == endGameCommand)
+    if (firstPlayerAnswer == EndGameCommand)
     {
-        Console.WriteLine($"Really? I was joking when i wrote that you can you can just type '{endGameCommand}' you know that? Not even gonna try to throw a guess? Fine, then leave.");
+        Console.WriteLine($"Really? I was joking when i wrote that you can you can just type '{EndGameCommand}' you know that? Not even gonna try to throw a guess? Fine, then leave.");
         break;
     }
     if (firstPlayerAnswer == "A" || firstPlayerAnswer == "319")
