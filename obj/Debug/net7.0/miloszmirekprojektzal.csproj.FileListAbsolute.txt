@@ -1,0 +1,14 @@
+D:\kodowanie\miloszmirekprojektzal\bin\Debug\net7.0\miloszmirekprojektzal.exe
+D:\kodowanie\miloszmirekprojektzal\bin\Debug\net7.0\miloszmirekprojektzal.deps.json
+D:\kodowanie\miloszmirekprojektzal\bin\Debug\net7.0\miloszmirekprojektzal.runtimeconfig.json
+D:\kodowanie\miloszmirekprojektzal\bin\Debug\net7.0\miloszmirekprojektzal.dll
+D:\kodowanie\miloszmirekprojektzal\bin\Debug\net7.0\miloszmirekprojektzal.pdb
+D:\kodowanie\miloszmirekprojektzal\obj\Debug\net7.0\miloszmirekprojektzal.GeneratedMSBuildEditorConfig.editorconfig
+D:\kodowanie\miloszmirekprojektzal\obj\Debug\net7.0\miloszmirekprojektzal.AssemblyInfoInputs.cache
+D:\kodowanie\miloszmirekprojektzal\obj\Debug\net7.0\miloszmirekprojektzal.AssemblyInfo.cs
+D:\kodowanie\miloszmirekprojektzal\obj\Debug\net7.0\miloszmirekprojektzal.csproj.CoreCompileInputs.cache
+D:\kodowanie\miloszmirekprojektzal\obj\Debug\net7.0\miloszmirekprojektzal.dll
+D:\kodowanie\miloszmirekprojektzal\obj\Debug\net7.0\refint\miloszmirekprojektzal.dll
+D:\kodowanie\miloszmirekprojektzal\obj\Debug\net7.0\miloszmirekprojektzal.pdb
+D:\kodowanie\miloszmirekprojektzal\obj\Debug\net7.0\miloszmirekprojektzal.genruntimeconfig.cache
+D:\kodowanie\miloszmirekprojektzal\obj\Debug\net7.0\ref\miloszmirekprojektzal.dll
