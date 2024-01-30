@@ -1,21 +1,21 @@
 ﻿string EndGameCommand = "i don't know";
+int PlayerPoints = 0;
 Console.WriteLine("Ill ask you 3 simple questions, in order to be a citizen of Chrzanów you must answer all of them 3 correctly");
 Console.WriteLine($"or you could write '{EndGameCommand}' but you would never do that right? haha");
-
-while (true)
-{
 Console.WriteLine("But before we start tell me, whats your name?");
-    var PlayerName = Console.ReadLine();
+    string? PlayerName = Console.ReadLine();
         
         if (PlayerName == EndGameCommand)
     {
         Console.WriteLine($"wha... what? How can you '{EndGameCommand}'?! OK THEN mister {EndGameCommand}. How about you leave then? Actually no. You failed. BYE JOKER");
-        break;
+        goto ExitProgram;
     }
 else
 {
     Console.WriteLine($"{PlayerName}? Nice name, alright now that i know your name lets begin with this first question!");
 }
+while (true)
+{
     Console.WriteLine("------------------------------------");
     Console.WriteLine("Who's the current major of Chrzanów?");
     string? firstPlayerAnswer = Console.ReadLine();
@@ -23,10 +23,11 @@ else
     if (firstPlayerAnswer == EndGameCommand)
     {
         Console.WriteLine($"Really? I was joking when i wrote that you can you can just type '{EndGameCommand}' you know that? Not even gonna try to throw a guess? Fine, then leave.");
-        break;
+        goto ExitProgram;
     }
     if (firstPlayerAnswer == "Robert Maciaszek" || firstPlayerAnswer == "Maciaszek")
     {
+        PlayerPoints += 1;
         Console.WriteLine("Good, that was an easy question, next one will be harder");
         Console.WriteLine("------------------------------------");
     }
@@ -42,10 +43,11 @@ else
         if (firstPlayerAnswer == EndGameCommand)
     {
         Console.WriteLine($"Really? I was joking when i wrote that you can you can just type '{EndGameCommand}' you know that? Not even gonna try to throw a guess? Fine, then leave.");
-        break;
+        goto ExitProgram;
     }
     if (firstPlayerAnswer == "nothing")
     {
+        PlayerPoints += 1;
         Console.WriteLine("uh..yeah actually, nothing ever happens on Kąty. Fine that counts");
         Console.WriteLine("------------------------------------");
     }
@@ -64,6 +66,7 @@ else
     }
     if (firstPlayerAnswer == "A" || firstPlayerAnswer == "319")
     {
+        PlayerPoints += 1;
         Console.WriteLine("YES, that is correct. Two lines connect us that is A and 319. Too bad none of them are our buses");
         Console.WriteLine("Jaworzno owns them and our entire economy depends on them... or so was i told... it was revealed to me in a dream");
         Console.WriteLine("ALRIGHT NEXT QUESTION");
@@ -75,9 +78,24 @@ else
         Console.WriteLine("goodluck going back home without a bus. I doubt you'll be able to answer next 2 questions");
         Console.WriteLine("------------------------------------");
     }
+    Console.WriteLine($"Your score is {PlayerPoints}");
+    if (PlayerPoints == 0)
+    {
+        Console.WriteLine("Wow. This was absolutly Terrible");
+        Console.WriteLine($"I'm gonna be honest with you {PlayerName}. You did so bad i won't even allow you to try again. Goodbye.");
+        break;
+    }
+    if (PlayerPoints == 1 || PlayerPoints ==2)
+    {
+        Console.WriteLine("Better then nothing i guess. You can try again now that you know whats wrong");
+    }
+    else
+    {
+        Console.WriteLine($"OH WOW. well well then {PlayerName}. Congrats on becoming a new citizen of Chrzanów");
+        Console.WriteLine($"This was Perfect and you tottaly deserve it. Thank you for taking the test and Goodbye {PlayerName}!");
+        break;
+    }
 }
-// 4. count the correct answers
-// 5. if player has more then 3 correct answers he is a citizen and if not then he is a losser
-
-Console.WriteLine("Dziękuje za test, jesteś teraz obywatelem miasta Chrzanowa");
+ExitProgram:
+Console.WriteLine("Press enter to leave");
 Console.ReadLine();
