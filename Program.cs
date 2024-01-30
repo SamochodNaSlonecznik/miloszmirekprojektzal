@@ -3,13 +3,13 @@ int PlayerPoints = 0;
 Console.WriteLine("Ill ask you 3 simple questions, in order to be a citizen of Chrzanów you must answer all of them 3 correctly");
 Console.WriteLine($"or you could write '{EndGameCommand}' but you would never do that right? haha");
 Console.WriteLine("But before we start tell me, whats your name?");
-    string? PlayerName = Console.ReadLine();
-        
-        if (PlayerName == EndGameCommand)
-    {
-        Console.WriteLine($"wha... what? How can you '{EndGameCommand}'?! OK THEN mister {EndGameCommand}. How about you leave then? Actually no. You failed. BYE JOKER");
-        goto ExitProgram;
-    }
+string? PlayerName = Console.ReadLine();
+
+if (PlayerName == EndGameCommand)
+{
+    Console.WriteLine($"wha... what? How can you '{EndGameCommand}'?! OK THEN mister {EndGameCommand}. How about you leave then? Actually no. You failed. BYE JOKER");
+    goto ExitProgram;
+}
 else
 {
     Console.WriteLine($"{PlayerName}? Nice name, alright now that i know your name lets begin with this first question!");
@@ -40,7 +40,7 @@ while (true)
 
     Console.WriteLine("What is happening on 'Kąty'?");
     firstPlayerAnswer = Console.ReadLine();
-        if (firstPlayerAnswer == EndGameCommand)
+    if (firstPlayerAnswer == EndGameCommand)
     {
         Console.WriteLine($"Really? I was joking when i wrote that you can you can just type '{EndGameCommand}' you know that? Not even gonna try to throw a guess? Fine, then leave.");
         goto ExitProgram;
@@ -69,13 +69,12 @@ while (true)
         PlayerPoints += 1;
         Console.WriteLine("YES, that is correct. Two lines connect us that is A and 319. Too bad none of them are our buses");
         Console.WriteLine("Jaworzno owns them and our entire economy depends on them... or so was i told... it was revealed to me in a dream");
-        Console.WriteLine("ALRIGHT NEXT QUESTION");
         Console.WriteLine("------------------------------------");
     }
     else
     {
         Console.WriteLine("You ether own a car or never been outside drunk with friends. I am not gonna even tell you what lines are they");
-        Console.WriteLine("goodluck going back home without a bus. I doubt you'll be able to answer next 2 questions");
+        Console.WriteLine("goodluck going back home without a bus.");
         Console.WriteLine("------------------------------------");
     }
     Console.WriteLine($"Your score is {PlayerPoints}");
@@ -85,7 +84,7 @@ while (true)
         Console.WriteLine($"I'm gonna be honest with you {PlayerName}. You did so bad i won't even allow you to try again. Goodbye.");
         break;
     }
-    if (PlayerPoints == 1 || PlayerPoints ==2)
+    if (PlayerPoints == 1 || PlayerPoints == 2)
     {
         Console.WriteLine("Better then nothing i guess. You can try again now that you know whats wrong");
     }
@@ -95,6 +94,7 @@ while (true)
         Console.WriteLine($"This was Perfect and you tottaly deserve it. Thank you for taking the test and Goodbye {PlayerName}!");
         break;
     }
+    PlayerPoints = 0;
 }
 ExitProgram:
 Console.WriteLine("Press enter to leave");
