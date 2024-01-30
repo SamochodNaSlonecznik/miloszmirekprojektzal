@@ -1,33 +1,38 @@
 ﻿
 using System.Runtime.CompilerServices;
 
-Console.WriteLine("Ill ask you 5 simple questions, in order to be a citizen of Chrzanów you must answer at least 3 correctly");
+Console.WriteLine("Ill ask you 3 simple questions, in order to be a citizen of Chrzanów you must answer all of them 3 correctly");
 while (true)
 {
-    Console.WriteLine("------------------------------------");
 
+    Console.WriteLine("------------------------------------");
     Console.WriteLine("Who's the current major of Chrzanów?");
     string? firstPlayerAnswer = Console.ReadLine();
 
-    if (firstPlayerAnswer == "I don't know")
+    if (firstPlayerAnswer == "i don't know")
     {
         Console.WriteLine("Really? You just don't know? Not even gonna try to throw a guess? Fine then leave and never comeback.");
         break;
     }
 
-    if (firstPlayerAnswer == "Robert Maciaszek")
+    if (firstPlayerAnswer == "Robert Maciaszek" || firstPlayerAnswer == "Maciaszek")
     {
         Console.WriteLine("Good, that was an easy question, next one will be harder");
         Console.WriteLine("------------------------------------");
     }
     else
     {
-        Console.WriteLine("What? Of course not. You're trying to be a citizen of Chrzanów but you don't even know who's the mayor.");
+        Console.WriteLine("What? No. Of course not. You're trying to be a citizen of Chrzanów but you don't even know who's the mayor.");
         Console.WriteLine("I doubt you will be able to answer the next question. Well here goes nothing");
         Console.WriteLine("------------------------------------");
     }
     Console.WriteLine("What is happening on 'Kąty'?");
     firstPlayerAnswer = Console.ReadLine();
+        if (firstPlayerAnswer == "i don't know")
+    {
+        Console.WriteLine("Really? You just don't know? Not even gonna try to throw a guess? Fine then leave and never comeback.");
+        break;
+    }
     if (firstPlayerAnswer == "nothing")
     {
         Console.WriteLine("uh..yeah actually, nothing ever happens on Kąty. Fine that counts");
@@ -40,6 +45,11 @@ while (true)
     }
     Console.WriteLine("What is the name of the bus line that connects Chrzanów and Jaworzno?");
     firstPlayerAnswer = Console.ReadLine();
+    if (firstPlayerAnswer == "i don't know")
+    {
+        Console.WriteLine("Really? You just don't know? Not even gonna try to throw a guess? Fine then leave and never comeback.");
+        break;
+    }
     if (firstPlayerAnswer == "A" || firstPlayerAnswer == "319")
     {
         Console.WriteLine("YES, that is correct. Two lines connect us that is A and 319. Too bad none of them are our buses");
