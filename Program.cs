@@ -1,7 +1,7 @@
-﻿
-using System.Runtime.CompilerServices;
-
+﻿string endGameCommand = "i don't know";
 Console.WriteLine("Ill ask you 3 simple questions, in order to be a citizen of Chrzanów you must answer all of them 3 correctly");
+Console.WriteLine($"or you could write '{endGameCommand}' but you would never do that right? haha, alright here goes the first question");
+
 while (true)
 {
 
@@ -9,12 +9,11 @@ while (true)
     Console.WriteLine("Who's the current major of Chrzanów?");
     string? firstPlayerAnswer = Console.ReadLine();
 
-    if (firstPlayerAnswer == "i don't know")
+    if (firstPlayerAnswer == endGameCommand)
     {
-        Console.WriteLine("Really? You just don't know? Not even gonna try to throw a guess? Fine then leave and never comeback.");
+        Console.WriteLine($"Really? I was joking when i wrote that you can you can just type '{endGameCommand}' you know that? Not even gonna try to throw a guess? Fine, then leave.");
         break;
     }
-
     if (firstPlayerAnswer == "Robert Maciaszek" || firstPlayerAnswer == "Maciaszek")
     {
         Console.WriteLine("Good, that was an easy question, next one will be harder");
@@ -26,11 +25,12 @@ while (true)
         Console.WriteLine("I doubt you will be able to answer the next question. Well here goes nothing");
         Console.WriteLine("------------------------------------");
     }
+
     Console.WriteLine("What is happening on 'Kąty'?");
     firstPlayerAnswer = Console.ReadLine();
-        if (firstPlayerAnswer == "i don't know")
+        if (firstPlayerAnswer == endGameCommand)
     {
-        Console.WriteLine("Really? You just don't know? Not even gonna try to throw a guess? Fine then leave and never comeback.");
+        Console.WriteLine($"Really? I was joking when i wrote that you can you can just type '{endGameCommand}' you know that? Not even gonna try to throw a guess? Fine, then leave.");
         break;
     }
     if (firstPlayerAnswer == "nothing")
@@ -43,11 +43,12 @@ while (true)
         Console.WriteLine("you are WROOOOOONG, WRONG WRONG WROOOOONG. Nothing ever happens on kąty. NEXT QUESTION");
         Console.WriteLine("------------------------------------");
     }
+
     Console.WriteLine("What is the name of the bus line that connects Chrzanów and Jaworzno?");
     firstPlayerAnswer = Console.ReadLine();
-    if (firstPlayerAnswer == "i don't know")
+    if (firstPlayerAnswer == endGameCommand)
     {
-        Console.WriteLine("Really? You just don't know? Not even gonna try to throw a guess? Fine then leave and never comeback.");
+        Console.WriteLine($"Really? I was joking when i wrote that you can you can just type '{endGameCommand}' you know that? Not even gonna try to throw a guess? Fine, then leave.");
         break;
     }
     if (firstPlayerAnswer == "A" || firstPlayerAnswer == "319")
